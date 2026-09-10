@@ -1,0 +1,33 @@
+.favorite-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-spring);
+}
+
+.favorite-btn:hover {
+  color: var(--secondary);
+  background: hsla(330, 100%, 71%, 0.1);
+}
+
+.favorite-btn--active {
+  color: var(--secondary);
+}
+
+.favorite-btn--active:hover {
+  transform: scale(1.15);
+}
+
+.favorite-btn path {
+  transition: fill var(--transition-base), stroke var(--transition-base);
+}
+
+.favorite-btn--sm {
+  padding: 4px;
+}

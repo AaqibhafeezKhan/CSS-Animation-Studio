@@ -1,0 +1,17 @@
+{
+  "name": "CSS Motion Master",
+  "short_name": "Motion",
+  "description": "A production-grade CSS animation studio with 60 curated animations, a keyframe builder, analytics, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0f1a",
+  "theme_color": "#6c63ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "screenshots": [],
+  "categories": ["developer tools", "design", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

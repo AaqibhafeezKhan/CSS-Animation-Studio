@@ -1,0 +1,17 @@
+export const EASINGS = [
+  { label: 'Linear', value: 'linear' },
+  { label: 'Ease', value: 'ease' },
+  { label: 'Ease In', value: 'ease-in' },
+  { label: 'Ease Out', value: 'ease-out' },
+  { label: 'Ease In Out', value: 'ease-in-out' },
+  { label: 'Spring', value: 'cubic-bezier(0.34, 1.56, 0.64, 1)' },
+  { label: 'Smooth', value: 'cubic-bezier(0.4, 0, 0.2, 1)' },
+  { label: 'Snappy', value: 'cubic-bezier(0.2, 0.6, 0.4, 1)' },
+  { label: 'Bounce In', value: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)' },
+  { label: 'Slow Start', value: 'cubic-bezier(0.8, 0, 1, 1)' },
+  { label: 'Slow End', value: 'cubic-bezier(0, 0, 0.2, 1)' },
+  { label: 'Back In', value: 'cubic-bezier(0.6, -0.28, 0.74, 0.05)' },
+  { label: 'Back Out', value: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)' },
+  { label: 'Steps (4)', value: 'steps(4, end)' },
+  { label: 'Steps (8)', value: 'steps(8, end)' },
+]

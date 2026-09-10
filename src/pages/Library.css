@@ -1,0 +1,115 @@
+.library-page {
+  display: flex;
+  min-height: calc(100vh - 64px);
+}
+
+.library-main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--spacing-xl) var(--spacing-xl);
+  overflow-x: hidden;
+}
+
+.library-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xl);
+}
+
+.library-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.library-count {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.library-virtual-container {
+  position: relative;
+  width: 100%;
+}
+
+.library-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  will-change: transform;
+}
+
+.library-grid--comfortable {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.library-grid--compact {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.library-grid--list {
+  grid-template-columns: 1fr;
+}
+
+.library-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  min-height: 400px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.library-empty p {
+  font-size: 1rem;
+  max-width: 300px;
+}
+
+.library-filter-mobile-button,
+.library-filter-backdrop {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .library-grid--comfortable { grid-template-columns: repeat(2, 1fr); }
+  .library-grid--compact { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .library-filter-mobile-button {
+    display: inline-flex;
+    position: fixed;
+    right: var(--spacing-md);
+    bottom: var(--spacing-md);
+    z-index: 120;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .library-filter-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 108;
+    border: none;
+    background: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .library-main { padding: var(--spacing-lg) var(--spacing-md); }
+  .library-grid--comfortable,
+  .library-grid--compact { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .library-grid--comfortable,
+  .library-grid--compact { grid-template-columns: 1fr; }
+}
